@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ArchitectureProject
 {
-    internal class Customer : BaseComponent {
+    internal class Customer {
 
         private string name;
         private string id;
@@ -18,19 +18,6 @@ namespace ArchitectureProject
             this.id = Id;
             this.name = Name;
             order = new List<Order>();
-        }
-        public void DoA()
-        {
-            Console.WriteLine("Component 1 does A.");
-
-            this._mediator.Notify(this, "A");
-        }
-
-        public void DoB()
-        {
-            Console.WriteLine("Component 1 does B.");
-
-            this._mediator.Notify(this, "B");
         }
 
 

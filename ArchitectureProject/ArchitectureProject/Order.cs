@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ArchitectureProject
 {
-    internal class Order : BaseComponent
+    internal class Order
     {
         private string id;
         private List<MenuItem> items;
@@ -22,18 +22,5 @@ namespace ArchitectureProject
         public List<MenuItem> Items { get => items; set => items = value; }
         public bool Local { get => local; set => local = value; }
 
-        public void DoC()
-        {
-            Console.WriteLine("Component 2 does C.");
-
-            this._mediator.Notify(this, "C");
-        }
-
-        public void DoD()
-        {
-            Console.WriteLine("Component 2 does D.");
-
-            this._mediator.Notify(this, "D");
-        }
     }
 }

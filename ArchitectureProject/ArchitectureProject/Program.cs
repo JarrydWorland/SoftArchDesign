@@ -12,10 +12,12 @@ namespace ArchitectureProject
         static void Main(string[] args)
         {
             //var result = $"Factory was implemented at {DateTime.Now}";
-            //var logger = LoggerFactory.CreateLogger(LoggerFactory.LoggerType.Console);
+            lLogger logger = LoggerFactory.CreateLogger(LoggerFactory.LoggerType.Console);
+            Payment payment = new LocalPayment("Filip", 1234213412341234, 1234, 16, logger);
+            payment.validatePayment();
             //logger.Log(result);
 
-            //Console.ReadLine(); 
+            Console.ReadLine(); 
 
         }
 
