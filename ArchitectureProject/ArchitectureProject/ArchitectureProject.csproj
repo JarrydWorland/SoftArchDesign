@@ -58,8 +58,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservation.cs" />
+    <Compile Include="ReservationLogger.cs" />
     <Compile Include="Staff.cs" />
     <Compile Include="Table.cs" />
+    <Compile Include="Table00001.cs" />
+    <Compile Include="Table00002.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

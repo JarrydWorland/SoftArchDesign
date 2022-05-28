@@ -37,7 +37,7 @@ namespace ArchitectureProject
             }
             else
             {
-                int dif = sum - givenSum;
+                double dif = sum - givenSum;
                 if(dif < 0)
                 {
                     succ = true;

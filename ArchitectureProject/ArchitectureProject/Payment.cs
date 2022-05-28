@@ -14,9 +14,9 @@ namespace ArchitectureProject
         public ushort expYear;
         public ushort cvv;
         public ushort pin;
-        public int sum;
+        public double sum;
         public lLogger logger;
-        public Payment(string Name, ulong cardNumber, ushort expMonth, ushort expYear, ushort cvv, int sum, lLogger logger)
+        public Payment(string Name, ulong cardNumber, ushort expMonth, ushort expYear, ushort cvv, double sum, lLogger logger)
         {
             this.name = Name;
             this.cardNumber = cardNumber;
@@ -27,7 +27,7 @@ namespace ArchitectureProject
             this.logger = logger;
         }
 
-        public Payment(string Name, ulong cardNumber, ushort pin, int sum, lLogger logger)
+        public Payment(string Name, ulong cardNumber, ushort pin, double sum, lLogger logger)
         {
             this.name = Name;
             this.cardNumber = cardNumber;
@@ -36,7 +36,7 @@ namespace ArchitectureProject
             this.logger = logger;
         }
 
-        public Payment(int sum, lLogger logger)
+        public Payment(double sum, lLogger logger)
         {
             this.sum = sum;
             this.logger = logger;

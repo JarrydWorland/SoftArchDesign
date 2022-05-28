@@ -8,6 +8,7 @@ namespace ArchitectureProject
 {
     public interface lLogger
     {
+        void Log(string message, string dir);
         void Log(string message);
     }
 }

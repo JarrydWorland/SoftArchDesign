@@ -11,55 +11,31 @@ namespace ArchitectureProject
 
         private string name;
         private string id;
-        private List<Order> order;
+        private List<Order> orders;
         private int curOrder = 0;
         public Customer(String Id, String Name)
         {
             this.id = Id;
             this.name = Name;
-            order = new List<Order>();
+            orders = new List<Order>();
         }
 
 
 
-        public void createOrder(String id, Boolean local)
+        public Order createOrder(String id, Payment payment)
         {
-            Order newOrder = new Order(id, local);
-            order.Add(newOrder);
+            Order newOrder = new Order(id, payment);
+            orders.Add(newOrder);
+            return newOrder;
         }
 
-
-        public Boolean addToOrder(MenuItem item)
+        public Order getOrder(String id)
         {
-            if(order != null && item != null)
-            {
-                order[curOrder].Items.Add(item);
-                return true;
-            }
-            return false;
-        }
-
-        public Boolean removeFromOrder(MenuItem item)
-        {
-            if (order[curOrder].Items.Contains(item) && order != null)
-            {
-                order[curOrder].Items.Remove(item);
-                return true;
-            }
-            return false;
-        }
-
-        public Order showOrder()
-        {
-            if(order != null)
-            {
-
-                return order[curOrder];
-            }
-            return null;
+            return orders.Find(x => x.Id == id);
         }
 
         public string Name { get => name; set => name = value; }
         public string Id { get => id; set => id = value; }
+        internal List<Order> Orders { get => orders; set => orders = value; }
     }
 }

@@ -9,12 +9,17 @@ namespace ArchitectureProject
 {
     internal class FileLogger : lLogger
     {
-        public void Log(string message)
+        public void Log(string message, string dir)
         {
-            using(StreamWriter w = File.AppendText("restaurantLog.log"))
+            using(StreamWriter w = File.AppendText("C:\\Users\\filip\\source\\repos\\ArchitectureProject\\ArchitectureProject\\restaurantLog.txt"))
             {
                 w.WriteLine($"DateTime: {DateTime.Now}, Data: {message}");
             }
+        }
+
+        public void Log(string message)
+        {
+            throw new NotImplementedException();
         }
     }
 }

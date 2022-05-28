@@ -13,7 +13,8 @@ namespace ArchitectureProject
         {
             File,
             Console,
-            Database
+            Database,
+            Reservation
         }
 
         public static lLogger CreateLogger(LoggerType type)
@@ -26,6 +27,9 @@ namespace ArchitectureProject
                     break;
                 case LoggerType.File:
                     logger = new FileLogger();
+                    break;
+                case LoggerType.Reservation:
+                    logger = new ReservationLogger();
                     break;
                 default:
                     logger = new FileLogger();

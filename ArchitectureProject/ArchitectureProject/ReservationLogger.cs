@@ -7,11 +7,16 @@ using System.Threading.Tasks;
 
 namespace ArchitectureProject
 {
-    internal class ConsoleLogger : lLogger
+    internal class ReservationLogger : lLogger
     {
         public void Log(string message, string dir)
         {
-                Console.WriteLine($"DateTime: {DateTime.Now}, Data: {message}");
+            DateTime date = DateTime.UtcNow.Date;
+            String time = DateTime.Now.ToString("hh:mm");
+            using (StreamWriter w = File.AppendText(dir))
+            {
+                w.WriteLine($"{message}. Date: ({date.ToString("dd/MM/yyyy")}), Time of reservation: ({time})");
+            }
         }
 
         public void Log(string message)

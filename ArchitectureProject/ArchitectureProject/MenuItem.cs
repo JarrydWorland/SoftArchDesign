@@ -12,12 +12,12 @@ namespace ArchitectureProject
         private string id;
         private string name;
         private string desc;
-        private string price;
+        private double price;
         private string veg;
         private string cal;
         private string img;
 
-        public MenuItem(String Id, String Name, String Desc, String Price, String Veg, String Cal, String Img)
+        public MenuItem(String Id, String Name, String Desc, double Price, String Veg, String Cal, String Img)
         {
             this.Id = Id;
             this.Name = Name;
@@ -31,7 +31,7 @@ namespace ArchitectureProject
         public string Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public string Desc { get => desc; set => desc = value; }
-        public string Price { get => price; set => price = value; }
+        public double Price { get => price; set => price = value; }
         public string Veg { get => veg; set => veg = value; }
         public string Cal { get => cal; set => cal = value; }
         public string Img { get => img; set => img = value; }
