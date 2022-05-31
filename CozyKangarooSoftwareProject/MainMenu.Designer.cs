@@ -29,20 +29,70 @@ namespace CozyKangarooSoftwareProject
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1030, 594);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.ResumeLayout(false);
+			this.label1 = new System.Windows.Forms.Label();
+			this.orderButton = new System.Windows.Forms.Button();
+			this.reservationButton = new System.Windows.Forms.Button();
+			this.staffButton = new System.Windows.Forms.Button();
+			this.SuspendLayout();
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(13, 13);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(274, 13);
+			this.label1.TabIndex = 0;
+			this.label1.Text = "Welcome to Cozy Kangaroo! What would you like to do?";
+			// 
+			// orderButton
+			// 
+			this.orderButton.Location = new System.Drawing.Point(16, 30);
+			this.orderButton.Name = "orderButton";
+			this.orderButton.Size = new System.Drawing.Size(75, 23);
+			this.orderButton.TabIndex = 1;
+			this.orderButton.Text = "Order";
+			this.orderButton.UseVisualStyleBackColor = true;
+			// 
+			// reservationButton
+			// 
+			this.reservationButton.Location = new System.Drawing.Point(98, 29);
+			this.reservationButton.Name = "reservationButton";
+			this.reservationButton.Size = new System.Drawing.Size(125, 23);
+			this.reservationButton.TabIndex = 2;
+			this.reservationButton.Text = "Make Reservation";
+			this.reservationButton.UseVisualStyleBackColor = true;
+			// 
+			// staffButton
+			// 
+			this.staffButton.Location = new System.Drawing.Point(230, 28);
+			this.staffButton.Name = "staffButton";
+			this.staffButton.Size = new System.Drawing.Size(100, 23);
+			this.staffButton.TabIndex = 3;
+			this.staffButton.Text = "Login as Staff";
+			this.staffButton.UseVisualStyleBackColor = true;
+			// 
+			// Form1
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(1030, 594);
+			this.Controls.Add(this.staffButton);
+			this.Controls.Add(this.reservationButton);
+			this.Controls.Add(this.orderButton);
+			this.Controls.Add(this.label1);
+			this.Name = "Form1";
+			this.Text = "Cozy Kangaroo";
+			this.ResumeLayout(false);
+			this.PerformLayout();
 
         }
 
-        #endregion
-    }
+		#endregion
+
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Button orderButton;
+		private System.Windows.Forms.Button reservationButton;
+		private System.Windows.Forms.Button staffButton;
+	}
 }
 
