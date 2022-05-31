@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CozyKangarooSoftwareProject
 {
@@ -168,8 +169,8 @@ namespace CozyKangarooSoftwareProject
 
 
 
-
-            Console.ReadLine(); 
+            Application.Run(new MainMenu());
+            // Console.ReadLine(); 
 
         }
     }
