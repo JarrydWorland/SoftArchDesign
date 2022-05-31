@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArchitectureProject
+namespace CozyKangarooSoftwareProject
 {
     internal class Table00001 : Table
     {

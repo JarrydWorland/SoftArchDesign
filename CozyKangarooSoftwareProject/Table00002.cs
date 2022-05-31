@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArchitectureProject
+namespace CozyKangarooSoftwareProject
 {
     internal class Table00002 : Table
     {
         public Table00002(String id, String name, String desc, String res, String size, Boolean booked) : base(id, name, desc, res, size, booked) { }
-        private String dir = "C:\\Users\\filip\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Table00002.txt";
+        private String dir = "..\\..\\Table00002.txt";
 
         public override bool ValidateBooking(string date, string time)
         {
