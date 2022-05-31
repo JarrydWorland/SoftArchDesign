@@ -46,16 +46,75 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="CashPayment.cs" />
+    <Compile Include="ConsoleLogger.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="DatabaseLogger.cs" />
+    <Compile Include="FileLogger.cs" />
+    <Compile Include="KitchenStuff.cs" />
+    <Compile Include="lLogger.cs" />
+    <Compile Include="LocalPayment.cs" />
+    <Compile Include="LoggerFactory.cs" />
+    <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuItem.cs" />
+    <Compile Include="OnlinePayment.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderPending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderPending.Designer.cs">
+      <DependentUpon>OrderPending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs" />
+    <Compile Include="PaymentOnlineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentOnlineForm.Designer.cs">
+      <DependentUpon>PaymentOnlineForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Reservation.cs" />
+    <Compile Include="ReservationLogger.cs" />
+    <Compile Include="Reservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservations.Designer.cs">
+      <DependentUpon>Reservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff.cs" />
+    <Compile Include="StaffLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffLogin.Designer.cs">
+      <DependentUpon>StaffLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table.cs" />
+    <Compile Include="Table00001.cs" />
+    <Compile Include="Table00002.cs" />
+    <Compile Include="WaitStaff.cs" />
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderPending.resx">
+      <DependentUpon>OrderPending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentOnlineForm.resx">
+      <DependentUpon>PaymentOnlineForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +125,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reservations.resx">
+      <DependentUpon>Reservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffLogin.resx">
+      <DependentUpon>StaffLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
