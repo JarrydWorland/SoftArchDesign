@@ -52,6 +52,7 @@ namespace CozyKangarooSoftwareProject
 			this.orderButton.TabIndex = 1;
 			this.orderButton.Text = "Order";
 			this.orderButton.UseVisualStyleBackColor = true;
+			this.orderButton.Click += new System.EventHandler(this.orderButton_Click);
 			// 
 			// reservationButton
 			// 
@@ -61,6 +62,7 @@ namespace CozyKangarooSoftwareProject
 			this.reservationButton.TabIndex = 2;
 			this.reservationButton.Text = "Make Reservation";
 			this.reservationButton.UseVisualStyleBackColor = true;
+			this.reservationButton.Click += new System.EventHandler(this.reservationButton_Click);
 			// 
 			// staffButton
 			// 
@@ -70,8 +72,9 @@ namespace CozyKangarooSoftwareProject
 			this.staffButton.TabIndex = 3;
 			this.staffButton.Text = "Login as Staff";
 			this.staffButton.UseVisualStyleBackColor = true;
+			this.staffButton.Click += new System.EventHandler(this.staffButton_Click);
 			// 
-			// Form1
+			// MainMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,7 +83,7 @@ namespace CozyKangarooSoftwareProject
 			this.Controls.Add(this.reservationButton);
 			this.Controls.Add(this.orderButton);
 			this.Controls.Add(this.label1);
-			this.Name = "Form1";
+			this.Name = "MainMenu";
 			this.Text = "Cozy Kangaroo";
 			this.ResumeLayout(false);
 			this.PerformLayout();
