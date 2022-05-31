@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace CozyKangarooSoftwareProject
 {
-    public partial class Form1 : Form
+    public partial class MainMenu : Form
     {
-        public Form1()
+        public MainMenu()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Button Test");
+            Customer customer = new Customer("0001", "Filip");
         }
     }
 }

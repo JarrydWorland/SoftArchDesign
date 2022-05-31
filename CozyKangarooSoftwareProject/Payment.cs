@@ -6,83 +6,43 @@ using System.Threading.Tasks;
 
 namespace CozyKangarooSoftwareProject
 {
-    public class Payment
+    public abstract class Payment
     {
-        public bool valid = false;
-        public bool check = true;
-        public bool loloop = false;
-        public bool ValidatePayment(string name, ulong cardNumber, byte expMonth, byte expYear, ushort cvv)
+        public string name;
+        public ulong cardNumber;
+        public ushort expMonth;
+        public ushort expYear;
+        public ushort cvv;
+        public ushort pin;
+        public double sum;
+        public lLogger logger;
+        public Payment(string Name, ulong cardNumber, ushort expMonth, ushort expYear, ushort cvv, double sum, lLogger logger)
         {
-
-            Console.WriteLine("Sending Details");
-            CheckData(cardNumber, expMonth, expYear, cvv);
-
-            return true;
+            this.name = Name;
+            this.cardNumber = cardNumber;
+            this.expMonth = expMonth;
+            this.expYear = expYear;
+            this.cvv = cvv;
+            this.sum = sum;
+            this.logger = logger;
         }
 
-        public bool ValidatePayment(ulong cardNumber, ushort pin)
+        public Payment(string Name, ulong cardNumber, ushort pin, double sum, lLogger logger)
         {
-            Console.WriteLine("Sending Details");
-            CheckData(cardNumber, pin);
-            return true;
+            this.name = Name;
+            this.cardNumber = cardNumber;
+            this.pin = pin;
+            this.sum = sum;
+            this.logger = logger;
         }
 
-        public bool CheckData(ulong cardNumber, byte expMonth, byte expYear, ushort cvv)
+        public Payment(double sum, lLogger logger)
         {
-                if (cardNumber < 1000000000000000 && cardNumber > 9999999999999999)
-                {
-                    check = false;
-                    Console.WriteLine("Payment Details Invalid");
-                    return false;
-                }
-                if (expMonth < 1 && expMonth > 12)
-                {
-                    check = false;
-                    Console.WriteLine("Payment Details Invalid");
-                    return false;
-                }
-                if (expYear < 22 && expYear > 99)
-                {
-                    check = false;
-                    Console.WriteLine("Payment Details Invalid");
-                    return false;
-                }
-                if (cvv < 100 && cvv > 999)
-                {
-                    check = false;
-                    Console.WriteLine("Payment Details Invalid");
-                    return false;
-                }
-
-                Console.WriteLine("Payment Details Valid");
-                return true;
-
+            this.sum = sum;
+            this.logger = logger;
         }
 
-        public bool CheckData(ulong cardNumber, ushort pin)
-        {
-                if (cardNumber < 1000000000000000 && cardNumber > 9999999999999999)
-                {
-                    check = false;
-                    Console.WriteLine("Payment Details Invalid");
-                    return false;
-                }
-
-                if (pin < 1000 && pin > 9999)
-                {
-                    check = false;
-                    Console.WriteLine("Payment Details Invalid");
-                    return false;
-                }
-
-                if (check == true)
-                {
-                    loloop = true;
-                    Console.WriteLine("Payment Details Valid");
-                    return true;
-                }
-
-                return false;
-        }
+        public abstract bool validatePayment();
+        public abstract void logPayment();
     }
 }

@@ -47,6 +47,7 @@
     <Compile Include="Customer.cs" />
     <Compile Include="DatabaseLogger.cs" />
     <Compile Include="FileLogger.cs" />
+    <Compile Include="KitchenStuff.cs" />
     <Compile Include="lLogger.cs" />
     <Compile Include="CashPayment.cs" />
     <Compile Include="LocalPayment.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Table.cs" />
     <Compile Include="Table00001.cs" />
     <Compile Include="Table00002.cs" />
+    <Compile Include="WaitStaff.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
