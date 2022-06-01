@@ -45,6 +45,7 @@ namespace CozyKangarooSoftwareProject
                 Console.WriteLine("Time there is a booking in file: " + cTime2);
                 if (bTime2 == cTime2 || bTime2 == cTime2 + 1)
                 {
+                    Console.WriteLine($"Time slots are overlapping");
                     return false;
                 }
             }

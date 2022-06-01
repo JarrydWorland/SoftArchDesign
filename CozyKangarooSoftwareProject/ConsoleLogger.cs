@@ -11,12 +11,12 @@ namespace CozyKangarooSoftwareProject
     {
         public void Log(string message, string dir)
         {
-                Console.WriteLine($"DateTime: {DateTime.Now}, Data: {message}");
+                throw new NotImplementedException();
         }
 
         public void Log(string message)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"DateTime: {DateTime.Now}, Data: {message}");
         }
     }
 }

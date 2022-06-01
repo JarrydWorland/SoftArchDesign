@@ -9,11 +9,9 @@ namespace CozyKangarooSoftwareProject
     internal class Reservation
     {
         private List<Table> tables;
-        public Reservation()
+        public Reservation(List<Table> tables)
         {
-            tables = new List<Table>();
-
-
+            this.tables = tables;
         }
 
         public Boolean bookTable(Table table)

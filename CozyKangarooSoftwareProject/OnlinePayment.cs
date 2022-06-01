@@ -10,7 +10,7 @@ namespace CozyKangarooSoftwareProject
     {
 
         private bool succ;
-        public OnlinePayment(string Name, ulong cardNumber, ushort expMonth, ushort expYear, ushort cvv, int sum, lLogger logger) : base(Name, cardNumber, expMonth, expYear, cvv, sum, logger)
+        public OnlinePayment(string Name, ulong cardNumber, ushort expMonth, ushort expYear, ushort cvv, double sum, lLogger logger) : base(Name, cardNumber, expMonth, expYear, cvv, sum, logger)
         {
             succ = false;
         }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CozyKangarooSoftwareProject
 {
-    internal class Customer {
+    public class Customer {
 
         private string name;
         private string id;

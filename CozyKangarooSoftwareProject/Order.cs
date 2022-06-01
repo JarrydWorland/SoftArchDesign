@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CozyKangarooSoftwareProject
 {
-    internal class Order
+    public class Order
     {
         private string id;
         private List<MenuItem> items;

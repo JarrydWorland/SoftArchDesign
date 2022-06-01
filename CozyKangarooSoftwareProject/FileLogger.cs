@@ -11,7 +11,7 @@ namespace CozyKangarooSoftwareProject
     {
         public void Log(string message, string dir)
         {
-            using(StreamWriter w = File.AppendText("C:\\Users\\filip\\source\\repos\\ArchitectureProject\\ArchitectureProject\\restaurantLog.txt"))
+            using(StreamWriter w = File.AppendText(dir))
             {
                 w.WriteLine($"DateTime: {DateTime.Now}, Data: {message}");
             }
