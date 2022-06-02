@@ -9,7 +9,7 @@ namespace CozyKangarooSoftwareProject
     internal class Table00001 : Table
     {
         public Table00001(String id, String name, String desc, String res, String size, Boolean booked) : base(id, name, desc, res, size, booked){}
-        private String dir = "C:\\Users\\filip\\Documents\\GitHub\\SoftArchDesign\\CozyKangarooSoftwareProject\\Table00001.txt";
+        private String dir = "..\\..\\Table00001.txt";
 
         public override bool ValidateBooking(string date, string time)
         {

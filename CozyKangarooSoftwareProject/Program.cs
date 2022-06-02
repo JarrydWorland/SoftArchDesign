@@ -35,7 +35,7 @@ namespace CozyKangarooSoftwareProject
             //char[] delimiterChars = { '(', ')' };
             //String[] data = null;
             //int counter = 0;
-            //foreach (string line in System.IO.File.ReadLines(@"C:\\Users\\filip\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Table00001.txt"))
+            //foreach (string line in System.IO.File.ReadLines(@"..\\..\\Table00001.txt"))
             //{
             //    System.Console.WriteLine(line);
             //    data = line.Split(delimiterChars);
@@ -59,7 +59,7 @@ namespace CozyKangarooSoftwareProject
             //DateTime dateTime = DateTime.UtcNow.Date;
             //Console.WriteLine(dateTime.ToString("dd/MM/yyyy"));
 
-            //string text = System.IO.File.ReadAllText("C:\\Users\\filip\\source\\repos\\ArchitectureProject\\ArchitectureProject\\Table2.txt");
+            //string text = System.IO.File.ReadAllText("..\\..\\Table2.txt");
             //System.Console.WriteLine("Contents of WriteText.txt = {0}", text);
 
 
