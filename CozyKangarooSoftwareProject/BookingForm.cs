@@ -22,7 +22,7 @@ namespace CozyKangarooSoftwareProject
         {
             InitializeComponent();
             timePicker.Format = DateTimePickerFormat.Custom;
-            timePicker.CustomFormat = "Pick: hh";
+            timePicker.CustomFormat = "Pick: HH";
             timePicker.ShowUpDown = true;
             this.logger = logger;
             this.mainMenu = mainMenu;

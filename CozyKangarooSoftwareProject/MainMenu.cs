@@ -20,6 +20,8 @@ namespace CozyKangarooSoftwareProject
         private BookingForm bookingForm;
         private OrderForm menu;
         private FoodMenu foodMenu;
+        private KitchenForm kitchenForm;
+        private WaitForm waitForm;
         public MainMenu()
         {
             InitializeComponent();
@@ -47,11 +49,26 @@ namespace CozyKangarooSoftwareProject
             menuItems.Add(coffee);
             menuItems.Add(juice);
 
+            Order order1 = new Order("1", null, 30);
+            Order order2 = new Order("2", null, 20);
+            Order order3 = new Order("3", null, 50);
+            Order order4 = new Order("4", null, 60);
+            Order order5 = new Order("5", null, 70);
+
+            orders.Add(order1);
+            orders.Add(order2);
+            orders.Add(order3);
+            orders.Add(order4);
+            orders.Add(order5);
+
+
             customer = new Customer("001", "John");
 
             bookingForm = new BookingForm(this, fLogger);
             menu = new OrderForm(customer, MenuItems, this, Logger);
             foodMenu = new FoodMenu(MenuItems, this);
+            kitchenForm = new KitchenForm(this);
+            waitForm = new WaitForm(this);
         }
 
         public List<Order> Orders { get => orders; set => orders = value; }
@@ -72,7 +89,8 @@ namespace CozyKangarooSoftwareProject
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            waitForm.Show();
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -99,6 +117,12 @@ namespace CozyKangarooSoftwareProject
         {
             this.Hide();
             bookingForm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            kitchenForm.Show();
         }
     }
 }
