@@ -29,25 +29,25 @@ namespace CozyKangarooSoftwareProject
 
         public override bool validatePayment()
         {
-            if (cardNumber < 1000000000000000 && cardNumber > 9999999999999999)
+            if (cardNumber < 1000000000000000 || cardNumber > 9999999999999999)
             {
                 Console.WriteLine("Payment Details Invalid");
                 logPayment();
                 return false;
             }
-            if (expMonth < 1 && expMonth > 12)
+            if (expMonth < 1 || expMonth > 12)
             { 
                 Console.WriteLine("Payment Details Invalid");
                 logPayment();
                 return false;
             }
-            if (expYear < 22 && expYear > 99)
+            if (expYear < 22 || expYear > 99)
             {
                 Console.WriteLine("Payment Details Invalid");
                 logPayment();
                 return false;
             }
-            if (cvv < 100 && cvv > 999)
+            if (cvv < 100 || cvv > 999)
             {
                 Console.WriteLine("Payment Details Invalid");
                 logPayment();

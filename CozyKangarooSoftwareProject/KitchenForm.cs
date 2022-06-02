@@ -19,6 +19,10 @@ namespace CozyKangarooSoftwareProject
             InitializeComponent();
             kitchenStuff = new KitchenStuff("333", "pass", "login");
             this.mainMenu = mainMenu;
+            foreach(Order o in mainMenu.Orders)
+            {
+                orderList.Items.Add(o.Id);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -36,6 +36,7 @@ namespace CozyKangarooSoftwareProject
             {
                 tableBox.Items.Add(t.Name);
             }
+            prompt.Hide();
         }
 
         private void BookingForm_Load(object sender, EventArgs e)
@@ -61,12 +62,20 @@ namespace CozyKangarooSoftwareProject
             {
 
                 var splitted = Regex.Split(timePicker.Value.ToString(), " ");
-                if (iFound.BookTable(splitted[1], datePicker.Value.ToString("dd/MM/yyyy"), logger))
+                if(iFound.BookTable(splitted[1], datePicker.Value.ToString("dd/MM/yyyy"), logger))
                 {
-                    this.Hide();
-                    mainMenu.Show();
+                    prompt.Text = "Booking successful";
+                }
+                else
+                {
+                    prompt.Text = "Booking failure";
                 }
             }
+            else
+            {
+                prompt.Text = "Booking failure";
+            }
+            prompt.Show();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -75,6 +84,17 @@ namespace CozyKangarooSoftwareProject
         }
 
         private void tableBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mainMenu.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

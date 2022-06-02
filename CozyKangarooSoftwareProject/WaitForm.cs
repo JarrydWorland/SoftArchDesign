@@ -19,6 +19,10 @@ namespace CozyKangarooSoftwareProject
             InitializeComponent();
             this.mainMenu = mainMenu;
             waitStaff = new WaitStaff("333", "pass", "login");
+            foreach (Order o in mainMenu.Orders)
+            {
+                orderList.Items.Add(o.Id);
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

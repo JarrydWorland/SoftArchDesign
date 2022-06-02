@@ -27,6 +27,7 @@ namespace CozyKangarooSoftwareProject
             this.items = items;
             this.logger = logger;
             this.mainMenu = mainMenu;
+            prompt.Hide();
             foreach (MenuItem item in items)
             {
                 orderChecklist.Items.Add(item.Name);
@@ -40,21 +41,29 @@ namespace CozyKangarooSoftwareProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-            int id = rnd.Next(1000, 9999);
-            order = new Order(id.ToString(), null, 20);
-            foreach(string s in orderChecklist.CheckedItems)
+            if(orderChecklist.SelectedItems.Count == 0)
             {
-                var iFound = items.FirstOrDefault(x => x.Name == s);
-                if (iFound != null)
-                {
-                    order.addItem(iFound);
-                }
+                prompt.Text = "Please select at least 1 item.";
             }
-            mainMenu.Orders.Add(order);
-            PaymentForm paymentForm = new PaymentForm(mainMenu, logger, order.totalSum());
-            this.Hide();
-            paymentForm.Show();
+            else
+            {
+                Random rnd = new Random();
+                int id = rnd.Next(1000, 9999);
+                order = new Order(id.ToString(), null, 20);
+                foreach (string s in orderChecklist.CheckedItems)
+                {
+                    var iFound = items.FirstOrDefault(x => x.Name == s);
+                    if (iFound != null)
+                    {
+                        order.addItem(iFound);
+                    }
+                }
+                mainMenu.Orders.Add(order);
+                PaymentForm paymentForm = new PaymentForm(mainMenu, logger, order.totalSum());
+                this.Hide();
+                paymentForm.Show();
+            }
+            prompt.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

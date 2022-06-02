@@ -54,12 +54,18 @@ namespace CozyKangarooSoftwareProject
             Order order3 = new Order("3", null, 50);
             Order order4 = new Order("4", null, 60);
             Order order5 = new Order("5", null, 70);
+            Order order6 = new Order("6", null, 50);
+            Order order7 = new Order("7", null, 60);
+            Order order8 = new Order("8", null, 70);
 
             orders.Add(order1);
             orders.Add(order2);
             orders.Add(order3);
             orders.Add(order4);
             orders.Add(order5);
+            orders.Add(order6);
+            orders.Add(order7);
+            orders.Add(order8);
 
 
             customer = new Customer("001", "John");
