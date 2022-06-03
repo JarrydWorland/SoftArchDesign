@@ -229,7 +229,7 @@ namespace CozyKangarooSoftwareProject
 			this.Controls.Add(this.item1Checkbox);
 			this.Controls.Add(this.item0Checkbox);
 			this.Name = "OrderForm";
-			this.Text = "Order Form";
+			this.Text = "Make an Order";
 			((System.ComponentModel.ISupportInitialize)(this.item0Amount)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.item1Amount)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.item2Amount)).EndInit();

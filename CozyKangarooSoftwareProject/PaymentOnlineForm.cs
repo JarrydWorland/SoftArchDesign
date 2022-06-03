@@ -16,5 +16,20 @@ namespace CozyKangarooSoftwareProject
         {
             InitializeComponent();
         }
-    }
+
+		private void cardExpiryMonth_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void cardExpirySlash_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void cardExpiryYear_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
